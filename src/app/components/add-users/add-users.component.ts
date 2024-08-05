@@ -9,7 +9,7 @@ import { User } from '../../models/users';
 })
 export class AddUsersComponent {
   user: User = {
-    userName: '',
+    name: '',
     email: ''
   };
   submitted = false;
@@ -18,7 +18,7 @@ export class AddUsersComponent {
 
   saveUser(): void {
     const data = {
-      userName: this.user.userName,
+      name: this.user.name,
       email: this.user.email
     };
 
@@ -34,7 +34,7 @@ export class AddUsersComponent {
   newTutorial(): void {
     this.submitted = false;
     this.user = {
-      userName: '',
+      name: '',
       email: ''
     };
   }

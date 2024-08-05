@@ -13,12 +13,12 @@ const baseUrl = Environment.baseUrl;
 export class UsersService {
 
   constructor(private http: HttpClient) {}
-
+//GET
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(baseUrl.concat('/getUsers'));
+    return this.http.get<User[]>(baseUrl.concat('/users'));
   }
-
+//POST
   create(data: any): Observable<any> {
-    return this.http.post(baseUrl.concat('/addUser'), data);
+    return this.http.post(baseUrl.concat('/users'), data);
   }
 }
