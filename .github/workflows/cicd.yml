@@ -3,7 +3,7 @@ name: Deploy Angular Application
 on:
   push:
     branches: 
-      - 'main'
+      - 'master'
     
 jobs:
   build:
@@ -30,4 +30,4 @@ jobs:
         #run: docker rmi vasanth23an/nodejs-app
       #  run: docker image prune -f
       - name: Run docker container
-        run: docker run --restart=always -d -p 4200:80 --name angular-app-container vasanth23an/angular-app
+        run: docker run -d -p 4200:80 --name angular-app-container vasanth23an/angular-app
